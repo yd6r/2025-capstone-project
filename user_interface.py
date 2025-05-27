@@ -22,7 +22,7 @@ def quizzing(subject, random_or_linear):
         if q.isdigit():
             index_answer = int(q)-1
             if index_answer < 0 or index_answer >= len(item["answers"]):
-                print("Index out of range, marked as incorrect. The correct answer was " + right_answer)
+                print("Index out of range, marked as incorrect. The correct answer was '" + right_answer + "'")
                 percentage_correct.append("incorrect")
             elif item["answers"][index_answer] == right_answer:
                 print("Correct!")
