@@ -18,21 +18,20 @@ def quizzing(subject, random_or_linear):
             times_run+=1
             print(str(times_run) + ") " + i)
 
-        print(right_answer)
         q = input()
         if q.isdigit():
             index_answer = int(q)-1
             if index_answer < 0 or index_answer >= len(item["answers"]):
-                print("Index out of range.")
+                print("Index out of range, marked as incorrect. The correct answer was '" + right_answer+"'")
                 percentage_correct.append("incorrect")
             elif item["answers"][index_answer] == right_answer:
                 print("Correct!")
                 percentage_correct.append("correct")
             else:
-                print("Incorret. The correct answer was " + right_answer)
+                print("Incorret. The correct answer was '" + right_answer + "'")
                 percentage_correct.append("incorrect")
         else: # q is not a digit
-            print("invalid input")
+            print("invalid input, the correct answer was '" + right_answer + "'")
             percentage_correct.append("incorrect")
     score = percentage_correct.count("correct") / len(percentage_correct)
     percent_score=str(score).replace("0.", "")
