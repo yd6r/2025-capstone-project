@@ -28,7 +28,7 @@ def quizzing(subject, random_or_linear):
                 print("Correct!")
                 percentage_correct.append("correct")
             else:
-                print("Incorret. The correct answer was '" + right_answer + "'")
+                print("Incorrect. The correct answer was '" + right_answer + "'")
                 percentage_correct.append("incorrect")
         else: # q is not a digit
             print("invalid input, the correct answer was '" + right_answer + "'")
